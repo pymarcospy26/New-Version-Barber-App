@@ -6,12 +6,8 @@ requires-python = ">=3.14"
 
 dependencies = [
     "flet==1.0.0",
-    "flet-cli==1.0.0",
-    "flet-desktop==1.0.0",
-    "flet-platform-assets==1.0.0",
-    "flet-web==1.0.0",
-    "qrcode==8.2",
     "python-dotenv==1.2.3",
+    "qrcode==8.2",
 ]
 
 [tool.flet]
