@@ -60,5 +60,8 @@ dependencies = [
 ]
 
 [build-system]
-requires = ["flet"]
-build-backend = "flet"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.flet]
+product = "barber_app"
