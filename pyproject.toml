@@ -10,5 +10,8 @@ dependencies = [
     "qrcode==8.2",
 ]
 
+[tool.setuptools]
+packages = []
+
 [tool.flet]
 product = "barber_app"
