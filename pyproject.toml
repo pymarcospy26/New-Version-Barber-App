@@ -1,3 +1,4 @@
+```toml
 [project]
 name = "new-version-barber-app"
 version = "0.1.0"
@@ -62,3 +63,4 @@ dependencies = [
 [build-system]
 requires = ["flet"]
 build-backend = "flet"
+```
