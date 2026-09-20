@@ -1,0 +1,30 @@
+name: Build Barros APK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-apk:
+    name: Gerar APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar projeto
+        uses: actions/checkout@v6
+
+      - name: Compilar APK
+        id: build
+        uses: flet-dev/flet-build-action@v1
+        with:
+          target: apk
+          runner-python-version: "3.14"
+          bundled-python-version: "3.14"
+          build-number: ${{ github.run_number }}
+
+      - name: Disponibilizar APK
+        uses: actions/upload-artifact@v7
+        with:
+          name: barros-apk
+          path: ${{ steps.build.outputs.archive-path }}
+          archive: false
+          if-no-files-found: error
